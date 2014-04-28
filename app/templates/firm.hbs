@@ -1,0 +1,15 @@
+<h3>About This {{capitalize-string type}} Firm</h3>
+
+{{#each instructions}}
+  <p>{{this}}</p>
+{{/each}}
+
+<p>Upon completion of the tests, you will grade them and write the scores on the worker résumés. (Activity 13.3)</p>
+<p>Each worker will have a résumé to bring to you for your review as part of their job search.</p>
+<p>You are free to hire as many workers as you want, at any wage you dictate, as long as that wage is not below $8. All wages must be in $1 increments.</p>
+<p>Workers who have good {{skill}} skills are more productive. Based on experience, you know your company earns $2 for each point on worker résumés. Example: If a potential worker has a score of 7 on his resume, he or she would earn your company $14. (7 (points) &times; $2= $14)</p>
+<p>If you pay this worker $8, your company will make $6 profit. ($14 (earning)-$8 (wage)= $6 (profit)). If you pay that worker $12, your company will make only $2 profit ($14 (earnings) - $12 (wage) = $2 (profit).</p>
+<p class="asterisk">The workers and other companies DO NOT know how much your firm earns. This information does not need to be shared with anyone outside of your group.</p>
+
+
+<p>{{#link-to 'chart' type}}Hire some employees &rarr;{{/link-to}}</p>
