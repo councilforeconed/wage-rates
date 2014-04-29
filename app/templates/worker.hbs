@@ -1,0 +1,11 @@
+<p>{{worker.name}}</p>
+
+<ul>
+  <li>{{#link-to 'math-test'}}Math Test{{/link-to}}</li>
+  <li>{{#link-to 'hand-eye-test'}}Hand Eye Coordination Test{{/link-to}}</li>
+  <li>{{#link-to 'resume'}}Resume{{/link-to}}</li>
+</ul>
+
+{{#with worker}}
+  {{input type=text value=name}}
+{{/with}}

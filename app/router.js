@@ -5,11 +5,10 @@ Router.map(function() {
   this.route('helper-test');
   this.route('firms', { path: 'firm/:type' });
   this.route('chart', { path: 'firm/:type/hiring-chart' });
-  this.resource('workers', function () {
-    this.route('math-test');
-    this.route('hand-eye');
-    this.route('resume');
-  });
+  this.route('worker');
+  this.route('math-test', { path: 'worker/math' });
+  this.route('hand-eye-test', { path: 'worker/hand-eye' });
+  this.route('resume', { path: 'worker/resume' });
 });
 
 export default Router;

@@ -1,0 +1,13 @@
+{{#if testOver}}<h3>Correct: {{correct}}</h3>{{/if}}
+
+<p>{{worker.name}}</p>
+
+<p>{{secondsRemaining}}</p>
+
+{{#if testActive}}
+  {{#each}}
+    {{math-question math=this}}
+  {{/each}}
+{{/if}}
+
+{{#unless testStarted}}<button type="countdown" {{action 'activateTest'}}>COUNTDOWN</button>{{/unless}}
