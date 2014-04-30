@@ -1,0 +1,11 @@
+{{#each}}
+  {{employee-chart-row firstName=firstName wage=wage skillPoints=skillPoints}}
+{{/each}}
+
+<button {{action 'addEmployee'}} type="button">Add Employee</button>
+
+<p>Total Skill Points: {{totalSkillPoints}}</p>
+<p>Total Wages: {{totalWages}}</p>
+<p>Dollar Amount Per Skill Point: {{dollarAmountPerPoint}}</p>
+<p>Value Produced: {{valueProduced}}</p>
+<p>Total Profit: {{profit}}</p>
