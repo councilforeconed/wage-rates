@@ -1,11 +1,9 @@
-<p>{{worker.name}}</p>
-
-<ul>
-  <li>{{#link-to 'math-test'}}Math Test{{/link-to}}</li>
-  <li>{{#link-to 'hand-eye-test'}}Hand Eye Coordination Test{{/link-to}}</li>
-  <li>{{#link-to 'resume'}}Resume{{/link-to}}</li>
-</ul>
-
 {{#with worker}}
-  {{input type=text value=name}}
+  {{input type=text value=name placeholder="Enter Your Name" class="block"}}
 {{/with}}
+
+{{#if worker.name}}
+  {{#link-to 'math-test' class="block-button"}}Take the Math Test{{/link-to}}
+  {{#link-to 'hand-eye-test' class="block-button"}}Take the Hand Eye Coordination Test{{/link-to}}
+  {{#link-to 'resume' class="block-button"}}View Your Resume{{/link-to}}
+{{/if}}

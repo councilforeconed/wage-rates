@@ -10,7 +10,7 @@ export default Ember.ArrayController.extend({
     return correct;
   }.property('@each.userAnswer'),
   
-  secondsRemaining: 10,
+  secondsRemaining: 1000,
   testActive: false,
   testStarted: false,
   countdown: null,
