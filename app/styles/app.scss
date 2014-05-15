@@ -1,4 +1,9 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,700,300);
 @import url("../../vendor/normalize.css/normalize.css");
+
+body {
+  font-family: 'Open Sans', sans-serif;
+}
 
 $blue: lightblue;
 $white: white;

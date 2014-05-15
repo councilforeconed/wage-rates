@@ -5,7 +5,7 @@ export default Ember.Controller.extend({
   worker: App.Worker,
   
   isResumeViewable: function () {
-    return this.get('worker.mathTestPoints') && this.get('worker.handEyeTestPoints');
+    return this.get('worker.mathTestPoints') !== null && this.get('worker.handEyeTestPoints') !== null;
   }.property('worker.mathTestPoints', 'worker.handEyeTestPoints')
   
 });
