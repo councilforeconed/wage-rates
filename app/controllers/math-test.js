@@ -33,6 +33,10 @@ export default Ember.ArrayController.extend({
         self.decrementProperty('secondsRemaining');
         console.log(self.get('secondsRemaining'));
       },1000));
+    },
+    completeTest: function () {
+      this.set('testOver', true);
+      this.set('secondsRemaining', 0);
     }
   }
   

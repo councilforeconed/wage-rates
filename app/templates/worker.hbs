@@ -5,5 +5,9 @@
 {{#if worker.name}}
   {{#link-to 'math-test' class="block-button"}}Take the Math Test{{/link-to}}
   {{#link-to 'hand-eye-test' class="block-button"}}Take the Hand Eye Coordination Test{{/link-to}}
-  {{#link-to 'resume' class="block-button"}}View Your Resume{{/link-to}}
+  {{#if isResumeViewable}}
+    {{#link-to 'resume' class="block-button"}}View Your Resume{{/link-to}}
+  {{else}}
+    <p class="notice">You will be able to view your résumé once you take both tests.</p>
+  {{/if}}
 {{/if}}

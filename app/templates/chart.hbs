@@ -1,11 +1,42 @@
-{{#each}}
-  {{employee-chart-row firstName=firstName wage=wage skillPoints=skillPoints}}
-{{/each}}
+<table class="employee-overview">
+  <thead>
+    <tr>
+      <th>Total Skill Points</th>
+      <th>Total Wages</th>
+      <th>Dollars Per Skill Point</th>
+      <th>Value Produced</th>
+      <th>Total Profit</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{totalSkillPoints}} points</td>
+      <td>{{format-currency totalWages}}</td>
+      <td>{{format-currency dollarAmountPerPoint}}</td>
+      <td>{{format-currency valueProduced}}</td>
+      <td>{{format-currency profit}}</td>
+    </tr>
+  </tbody>
+</table>
 
-<button {{action 'addEmployee'}} type="button">Add Employee</button>
+<table class="employees">
+  <thead>
+    <tr>
+      <th>First Name</th>
+      <th>Wage</th>
+      <th>Skill Points</th>
+    </tr>
+  </thead>
+  <tbody>
+  {{#each}}
+    {{employee-chart-row firstName=firstName wage=wage skillPoints=skillPoints}}
+  {{/each}}
+  </tbody>
+</table>
 
-<p>Total Skill Points: {{totalSkillPoints}}</p>
-<p>Total Wages: {{totalWages}}</p>
-<p>Dollar Amount Per Skill Point: {{dollarAmountPerPoint}}</p>
-<p>Value Produced: {{valueProduced}}</p>
-<p>Total Profit: {{profit}}</p>
+<button {{action 'addEmployee'}} type="button" class="push-right">Add Employee</button>
+
+
+
+
+

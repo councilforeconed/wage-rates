@@ -1,7 +1,20 @@
-<p>{{worker.name}}</p>
+<h3>Résumé</h3>
 
-<h3>Math Points</h3>
-<p>{{worker.mathTestPoints}}</p>
+<table>
+  <tbody>
+    <tr>
+      <th>Name</th>
+      <td>{{#if worker.name}}{{worker.name}}{{else}}xxx{{/if}}</td>
+    </tr>
+    <tr>
+      <th>Math Ability</th>
+      <td>{{#if worker.mathTestPoints}}{{worker.mathTestPoints}}{{else}}xxx{{/if}}</td>
+    </tr>
+    <tr>
+      <th>Hand-Eye Coordination</th>
+      <td>{{#if worker.handEyeTestPoints}}{{worker.handEyeTestPoints}}{{else}}xxx{{/if}}</td>
+    </tr>
+  </tbody>
+</table>
 
-<h3>Hand-Eye Test Points</h3>
-<p>{{worker.handEyeTestPoints}}</p>
+{{#link-to 'worker' class="block-button"}}Go Back{{/link-to}}

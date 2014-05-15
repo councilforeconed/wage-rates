@@ -1,13 +1,27 @@
 {{#if testOver}}<h3>Correct: {{correct}}</h3>{{/if}}
 
-<p>{{worker.name}}</p>
+<h4>Instructions</h4>
 
-<p>{{secondsRemaining}}</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+<p class="notice">Time Remaining: {{secondsRemaining}}</p>
 
 {{#if testActive}}
+<div class="questions">
   {{#each}}
     {{math-question math=this}}
   {{/each}}
+</div>
 {{/if}}
 
-{{#unless testStarted}}<button type="countdown" {{action 'activateTest'}}>Begin Test</button>{{/unless}}
+{{#if testActive}}
+<button type="countdown" {{action 'completeTest'}} class="block">Submit Test</button>
+{{/if}}
+
+{{#unless testStarted}}
+<button type="countdown" {{action 'activateTest'}} class="block">Begin Test</button>
+{{/unless}}
+
+{{#unless testActive}}
+{{#link-to 'worker' class="block button"}}Go Back{{/link-to}}
+{{/unless}}
