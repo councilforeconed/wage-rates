@@ -1,6 +1,8 @@
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:400,700,300);
 @import url("../../vendor/normalize.css/normalize.css");
 
+@import 'button';
+
 body {
   font-family: 'Open Sans', sans-serif;
 }
@@ -15,27 +17,6 @@ $border-radius: 10px;
   box-sizing: border-box;
   display: block;
   width: 100%;
-}
-
-@mixin buttonness {
-  background-color: $blue;
-  border-radius: $border-radius;
-  box-shadow: 5px 5px 0px darken($blue, 20);
-  color: white;
-  line-height: 50px;
-  margin: 1rem 0;
-  outline: none;
-  padding: 0 2rem;
-  text-align: center;
-  text-decoration: none;
-  text-shadow: 1px 1px 0px $pale;
-  border: none;
-  &:hover {
-    background-color: lighten($blue, 5);
-  }
-  &:active {
-    background-color: darken($blue, 5);
-  }
 }
 
 .container {
