@@ -1,0 +1,33 @@
+@import 'colors';
+
+table {
+  background: white;
+  margin-bottom: rem-calc(40);
+  width: 100%;
+
+  tr {
+    border: 1px solid lighten($pale, 5);
+    th, td {
+      display: table-cell;
+      padding: 0.5rem;
+      text-align: left;
+      max-width: 2rem;
+    }
+  }
+
+  thead tr th, tfoot tr th, tbody tr td,
+  tr td, tfoot tr td {
+    line-height: 1.2rem;
+  }
+}
+
+.employee-overview {
+  border-bottom: 1px dashed #CCC;
+  margin: 3rem 0;
+}
+
+.employees {
+  th, td {
+    padding: 0.25rem 0.5rem;
+  }
+}

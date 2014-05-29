@@ -1,13 +1,16 @@
 {{#with worker}}
-  {{input type=text value=name placeholder="Enter Your Name" class="block"}}
+  {{input type=text value=name placeholder="Enter Your Name" class="block xl"}}
 {{/with}}
 
 {{#if worker.name}}
-  {{#link-to 'math-test' class="block-button"}}Take the Math Test{{/link-to}}
-  {{#link-to 'hand-eye-test' class="block-button"}}Take the Hand Eye Coordination Test{{/link-to}}
   {{#if isResumeViewable}}
-    {{#link-to 'resume' class="block-button"}}View Your Resume{{/link-to}}
+    {{#link-to 'resume' class="button block secondary xl"}}View Your Resume{{/link-to}}
   {{else}}
+    {{#link-to 'math-test' class="button block secondary xl"}}Take the Math Test{{/link-to}}
+    {{#link-to 'hand-eye-test' class="button block secondary xl"}}Take the Hand Eye Coordination Test{{/link-to}}
     <p class="notice">You will be able to view your résumé once you take both tests.</p>
   {{/if}}
+  <div class="button-bar">
+    <button {{action 'clearData'}}>Clear Your Information</button>
+  </div>
 {{/if}}

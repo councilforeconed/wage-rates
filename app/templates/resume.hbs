@@ -1,20 +1,29 @@
-<h3>Résumé</h3>
+<div class="sixteen columns resume name">
+  <h1>{{worker.name}}</h1>
+</div>
 
-<table>
-  <tbody>
-    <tr>
-      <th>Name</th>
-      <td>{{#if worker.name}}{{worker.name}}{{else}}xxx{{/if}}</td>
-    </tr>
-    <tr>
-      <th>Math Ability</th>
-      <td>{{#if worker.mathTestPoints}}{{worker.mathTestPoints}}{{else}}xxx{{/if}}</td>
-    </tr>
-    <tr>
-      <th>Hand-Eye Coordination</th>
-      <td>{{#if worker.handEyeTestPoints}}{{worker.handEyeTestPoints}}{{else}}xxx{{/if}}</td>
-    </tr>
-  </tbody>
-</table>
+<div class="eight columns resume skill">
+  <h2>Hand-Eye Coordination</h2>
+  <p>
+  {{#if worker.handEyeTestPoints}}
+    {{worker.handEyeTestPoints}} Skill Points
+  {{else}}
+    {{link-to 'Take the Test to Determine Your Hand-Eye Coordination' 'hand-eye-test' class="button block secondary"}}
+  {{/if}}
+  </p>
+</div>
 
-{{#link-to 'worker' class="block-button"}}Go Back{{/link-to}}
+<div class="eight columns resume skill">
+  <h2>Mathematics Ability</h2>
+  <p>
+  {{#if hasTakenMathTest}}
+    {{worker.mathTestPoints}} Skill Points
+  {{else}}
+    {{link-to 'Take the Test to Determine Your Mathematical Ability' 'math-test' class="button block secondary"}}
+  {{/if}}
+  </p>
+</div>
+
+<div class="sixteen columns button-bar">
+  {{#link-to 'worker' class="button"}}Go Back{{/link-to}}
+</div>

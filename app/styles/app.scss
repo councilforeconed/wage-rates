@@ -2,8 +2,18 @@
 
 @import '../../vendor/skeleton-sass/sass/skeleton';
 
+@import 'base';
 @import 'colors';
-@import 'container';
 @import 'header';
 @import 'fonts';
 @import 'button';
+@import 'table';
+@import 'input';
+@import 'questions';
+
+.block {
+  display: block;
+  width: 100%;
+  margin: 1rem 0;
+  text-align: center;
+}

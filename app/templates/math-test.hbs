@@ -1,10 +1,10 @@
-{{#if testOver}}<h3>Correct: {{correct}}</h3>{{/if}}
-
+{{#unless testOver}}
 <h4>Instructions</h4>
 
 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 
 <p class="notice">Time Remaining: {{secondsRemaining}}</p>
+{{/unless}}
 
 {{#if testActive}}
 <div class="questions">
@@ -14,14 +14,18 @@
 </div>
 {{/if}}
 
-{{#if testActive}}
-<button type="countdown" {{action 'completeTest'}} class="block">Submit Test</button>
-{{/if}}
+{{#if testOver}}<p class="notice">You answered {{correct}} questions correctly.</p>{{/if}}
 
-{{#unless testStarted}}
-<button type="countdown" {{action 'activateTest'}} class="block">Begin Test</button>
-{{/unless}}
+<div class="button-bar sixteen columns clearfix">
+  {{#unless testActive}}
+    {{#link-to 'worker' class="button secondary"}}Go Back{{/link-to}}
+  {{/unless}}
 
-{{#unless testActive}}
-{{#link-to 'worker' class="block button"}}Go Back{{/link-to}}
-{{/unless}}
+  {{#if testActive}}
+  <button type="countdown" {{action 'completeTest'}}>Submit Test</button>
+  {{/if}}
+
+  {{#unless testStarted}}
+  <button type="countdown" {{action 'activateTest'}}>Begin Test</button>
+  {{/unless}}
+</div>

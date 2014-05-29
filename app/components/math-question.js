@@ -1,5 +1,5 @@
 export default Ember.Component.extend({
-  
-  classNames: ['math-question']
-  
+
+  classNames: ['math-question', 'four', 'columns']
+
 });
