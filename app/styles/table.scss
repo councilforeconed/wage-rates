@@ -13,21 +13,30 @@ table {
       text-align: left;
       max-width: 2rem;
     }
+    th {
+      font-weight: 400;
+    }
   }
 
   thead tr th, tfoot tr th, tbody tr td,
   tr td, tfoot tr td {
     line-height: 1.2rem;
   }
+  @media screen and (max-width: 480px) {
+    font-size: 0.8em;
+  }
 }
 
 .employee-overview {
-  border-bottom: 1px dashed #CCC;
   margin: 3rem 0;
+  strong {
+    font-weight: 400;
+  }
 }
 
 .employees {
   th, td {
+    margin-top: 3rem;
     padding: 0.25rem 0.5rem;
   }
 }

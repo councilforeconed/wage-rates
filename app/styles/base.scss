@@ -1,3 +1,5 @@
+@import 'colors';
+
 * {
 	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
 	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
@@ -17,4 +19,17 @@
 
 .left {
   float: left;
+}
+
+.notice {
+  background-color: $pale;
+  border-radius: 3px;
+  padding: 1rem;
+  text-align: center;
+  font-size: 1.2em;
+  font-weight: 400;
+}
+
+.highlight {
+  background-color: $pale;
 }

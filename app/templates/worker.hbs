@@ -4,13 +4,14 @@
 
 {{#if worker.name}}
   {{#if isResumeViewable}}
-    {{#link-to 'resume' class="button block secondary xl"}}View Your Resume{{/link-to}}
+    {{#link-to 'resume' class="button block secondary xl"}}<i class="fa fa-file-pdf-o"></i> View Your Resume{{/link-to}}
   {{else}}
-    {{#link-to 'math-test' class="button block secondary xl"}}Take the Math Test{{/link-to}}
-    {{#link-to 'hand-eye-test' class="button block secondary xl"}}Take the Hand Eye Coordination Test{{/link-to}}
+    {{#link-to 'math-test' class="button block secondary xl"}}<i class="fa fa-pencil"></i> Take the Math Test{{/link-to}}
+    {{#link-to 'hand-eye-test' class="button block secondary xl"}}<i class="fa fa-eye"></i> Take the Hand Eye Coordination Test{{/link-to}}
     <p class="notice">You will be able to view your résumé once you take both tests.</p>
   {{/if}}
   <div class="button-bar">
+    {{link-to 'Go Back' 'index' class='button secondary'}}
     <button {{action 'clearData'}}>Clear Your Information</button>
   </div>
 {{/if}}

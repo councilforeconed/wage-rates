@@ -16,6 +16,7 @@
     "numeral": "~1.5.3",
     "moment": "~2.6.0",
     "normalize.css": "~3.0.1",
-    "skeleton-sass": "~1.6.3"
+    "skeleton-sass": "~1.6.3",
+    "font-awesome": "~4.1.0"
   }
 }

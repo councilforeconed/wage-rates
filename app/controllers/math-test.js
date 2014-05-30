@@ -1,20 +1,20 @@
 /* global App */
 
 export default Ember.ArrayController.extend({
-  
+
   worker: App.Worker,
-  
+
   correct: function () {
     var correct = this.filterBy('correct', true).get('length');
     this.get('worker').set('mathTestPoints', correct);
     return correct;
   }.property('@each.userAnswer'),
-  
-  secondsRemaining: 1000,
+
+  secondsRemaining: 240,
   testActive: false,
   testStarted: false,
   countdown: null,
-  
+
   stopCountdownAtZero: function () {
     if (!this.get('secondsRemaining')) {
       clearInterval(this.get('countdown'));
@@ -23,7 +23,7 @@ export default Ember.ArrayController.extend({
       console.log('The test is over.');
     }
   }.observes('secondsRemaining'),
-  
+
   actions: {
     activateTest: function () {
       var self = this;
@@ -31,7 +31,6 @@ export default Ember.ArrayController.extend({
       this.set('testStarted', true);
       this.set('countdown', setInterval(function () {
         self.decrementProperty('secondsRemaining');
-        console.log(self.get('secondsRemaining'));
       },1000));
     },
     completeTest: function () {
@@ -39,5 +38,5 @@ export default Ember.ArrayController.extend({
       this.set('secondsRemaining', 0);
     }
   }
-  
+
 });

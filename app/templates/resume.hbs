@@ -6,7 +6,7 @@
   <h2>Hand-Eye Coordination</h2>
   <p>
   {{#if worker.handEyeTestPoints}}
-    {{worker.handEyeTestPoints}} Skill Points
+    {{skill-point-count worker.handEyeTestPoints}}
   {{else}}
     {{link-to 'Take the Test to Determine Your Hand-Eye Coordination' 'hand-eye-test' class="button block secondary"}}
   {{/if}}
@@ -17,7 +17,7 @@
   <h2>Mathematics Ability</h2>
   <p>
   {{#if hasTakenMathTest}}
-    {{worker.mathTestPoints}} Skill Points
+    {{skill-point-count worker.mathTestPoints}}
   {{else}}
     {{link-to 'Take the Test to Determine Your Mathematical Ability' 'math-test' class="button block secondary"}}
   {{/if}}
